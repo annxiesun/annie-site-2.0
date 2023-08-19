@@ -60,7 +60,6 @@ export const Home = () => {
               badminton court, or listening to video essays!
             </motion.span>
           </p>
-         
         </div>
       </Container>
       <motion.div
@@ -80,6 +79,11 @@ export const Home = () => {
         <Experience />
       </motion.div>
       <Footer />
+      <div className="text-white w-full flex justify-center mb-56 gap-3">
+        <a className="hover:underline" href="https://d3l-n3st.vercel.app/prev">{"<<"}</a>
+        <span>✰</span>
+        <a className="hover:underline" href="https://d3l-n3st.vercel.app/next">{">>"}</a>
+      </div>
     </div>
   );
 };

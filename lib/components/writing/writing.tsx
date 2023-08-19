@@ -18,11 +18,9 @@ export const Writing = ({ posts }) => {
   return (
     <div className="w-full bg-shade h-screen overflow-scroll hide-scrollbar">
       <Container className="mb-10">
-        <h1 className="text-3xl font-bold text-white mb-1 mt-32">
-          Scribbles
-        </h1>
+        <h1 className="text-3xl font-bold text-white mb-1 mt-32">Scribbles</h1>
         <p className="text-white mb-10">
-            Some thoughts on projects I've worked on & maybe more
+          Some thoughts on projects I've worked on & maybe more
         </p>
         <div className="flex flex-col gap-10">
           {posts.map((post, i) => (
@@ -31,7 +29,9 @@ export const Writing = ({ posts }) => {
         </div>
       </Container>
 
-      <Footer />
+      <div className="mb-56">
+        <Footer />
+      </div>
     </div>
   );
 };
