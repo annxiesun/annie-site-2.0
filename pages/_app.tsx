@@ -4,9 +4,9 @@ import NavBar from "../lib/components/layout/nav-bar";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-            <NavBar />
+    <main>
+      <NavBar />
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }

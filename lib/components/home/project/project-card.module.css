@@ -13,7 +13,8 @@
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  @apply h-fit w-[400px] p-3 rounded-md gap-4 flex;
+  @apply h-fit p-3 rounded-md gap-4 flex;
+  gap: 4px;
 }
 
 .carouselContainer {
@@ -28,5 +29,12 @@
     rgba(0, 0, 0, 0) 95%,
     rgba(0, 0, 0, 0) 100%
   );
-  @apply w-full flex justify-center gap-4 items-center max-w-4xl m-auto
+
+  @apply w-full flex justify-center gap-4 items-center max-w-4xl m-auto relative
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    mask-image: none;
+  }
 }

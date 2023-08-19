@@ -33,7 +33,7 @@ export const Home = () => {
           transition={DURATION1}
         >
           <h1 className="text-3xl font-bold text-white mb-8 mt-32">
-            Hi my name is Annie Sun! 👋
+            Annie Sun!
           </h1>
         </motion.div>
 
@@ -60,7 +60,7 @@ export const Home = () => {
               badminton court, or listening to video essays!
             </motion.span>
           </p>
-          <Lottie className="w-[1000px]" animationData={blinkAnim} loop />
+         
         </div>
       </Container>
       <motion.div

@@ -23,9 +23,9 @@
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: linear-gradient(90deg, #8D95FF 50%, #2D3060 100%),
-    linear-gradient(#2D3060, #2D3060), linear-gradient(#2D3060, #2D3060),
-    linear-gradient(90deg, #8D95FF 50%, #2D3060 100%);
+  background-image: linear-gradient(90deg, #033aff 50%, #0a0c36 100%),
+    linear-gradient(#0a0c36, #0a0c36), linear-gradient(#0a0c36, #0a0c36),
+    linear-gradient(90deg, #033aff 50%, #0a0c36 100%);
   animation: rotate 4s linear infinite;
   box-sizing: border-box;
 }

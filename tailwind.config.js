@@ -5,8 +5,11 @@ module.exports = {
   content: ["./lib/components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["BRHendrix"]
+      },
       colors: {
-        shade: "#0e0f1c",
+        shade: "#000000",
         shadeLight: "#282434"
       },
       spacing: {

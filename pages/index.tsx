@@ -1,7 +1,6 @@
 import Container from "../lib/components/container";
 import MoreStories from "../lib/components/more-stories";
 import HeroPost from "../lib/components/hero-post";
-import Intro from "../lib/components/intro";
 import Layout from "../lib/components/layout";
 import { getAllPosts } from "../lib/utils/api";
 import Head from "next/head";
@@ -22,7 +21,7 @@ export default function Index({ allPosts }: Props) {
         <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
-          <Home />
+        <Home />
       </Layout>
     </>
   );

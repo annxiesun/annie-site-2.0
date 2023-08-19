@@ -1,5 +1,4 @@
 import Image from "next/image";
-import clsx from "clsx";
 import Post from "../../interfaces/post";
 import Link from "next/link";
 import DateFormatter from "../blog/date-formatter";
@@ -27,7 +26,7 @@ export const WritingItem = ({ post, delay }: WritingItemProps) => {
         <div className="flex gap-3 items-start">
           <div>
             <Image
-              className="max-w-[400px] rounded-lg"
+              className="max-w-[400px] max-h-[200px] rounded-lg"
               src={post.coverImage}
               alt={""}
               width={300}

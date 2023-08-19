@@ -12,7 +12,7 @@ export type ExperienceCardProps = {
 export const ExperienceCard = (props: ExperienceCardProps) => {
   const { company, description, logo, link, term } = props;
   return (
-    <a className="flex justify-between " href={link}>
+    <a className="flex justify-between hover:bg-white/10 rounded-md p-2 transition-colors duration-300" href={link} target="_blank">
       <div className="flex gap-3 items-center">
         <div>
           {logo ? (

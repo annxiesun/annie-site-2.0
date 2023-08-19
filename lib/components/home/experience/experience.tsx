@@ -7,30 +7,30 @@ const EXPERIENCE: ExperienceCardProps[] = [
   {
     company: "Spatial",
     term: "Summer 2023",
-    description: "jello",
+    description: "Software Engineer",
     logo: "/assets/companies/spatial.jpeg",
-    link: "instagram.com",
+    link: "https://spatial.io",
   },
   {
     company: "Square",
     term: "Fall 2022",
-    description: "hello",
+    description: "Software Engineer",
     logo: "/assets/companies/square.jpg",
-    link: "instagram.com",
+    link: "https://squareup.com",
   },
   {
     company: "Reekon",
     term: "Winter 2022",
-    description: "ejd",
+    description: "Mobile Developer",
     logo: null,
-    link: "instagram.com",
+    link: "https://www.reekon.tools/",
   },
   {
     company: "Enzuzo",
     term: "Summer 2021",
-    description: "",
+    description: "Web Developer",
     logo: "/assets/companies/enzuzo.png",
-    link: "instagram.com",
+    link: "https://www.enzuzo.com/",
   },
 ];
 
