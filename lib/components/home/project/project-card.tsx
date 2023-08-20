@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   const { title, link, description, image } = props;
   return (
       <a className={classes.projectCard} href={link}>
-        <div className="absolute w-full h-full hover:bg-black/50 transition-colors duration-200 top-0 left-0" />
+        <div className="absolute w-full h-full max-w-[800px] hover:bg-black/50 transition-colors duration-200 top-0 left-0" />
         <Image
           className="w-full h-[200px] object-cover object-top mb-2 rounded-sm"
           src={image}
