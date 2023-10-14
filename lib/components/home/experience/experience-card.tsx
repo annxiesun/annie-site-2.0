@@ -12,7 +12,7 @@ export type ExperienceCardProps = {
 export const ExperienceCard = (props: ExperienceCardProps) => {
   const { company, description, logo, link, term } = props;
   return (
-    <a key={company} className="flex justify-between hover:bg-white/10 hover:backdrop-blur rounded-md p-2 transition-colors duration-300 items-center" href={link} target="_blank">
+    <a className="flex justify-between hover:bg-white/10 hover:backdrop-blur rounded-md p-2 transition-colors duration-300 items-center" href={link} target="_blank">
       <div className="flex gap-3 items-center">
         <div>
           {logo ? (

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import blinkAnim from "../../assets/blink.json";
+import { useState } from "react";
 
 const FADE_INITIAL = { opacity: 0 };
 const FADE_ANIMATE = { opacity: 1 };
@@ -22,6 +23,11 @@ const DURATION3 = {
 const DURATION4 = { delay: 0.75, duration: 0.8 };
 
 export const Home = () => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const fadeIn = () => {
+    setImageLoaded(true)
+  };
+
   return (
     <>
       <Image
@@ -29,8 +35,12 @@ export const Home = () => {
         alt=""
         width={1000}
         height={500}
-        className="absolute z-[0] top-[-100px] left-1/2 transform -translate-x-1/2
-        "
+        unoptimized={true}
+        priority
+        className={`${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        } transition-opacity duration-500 absolute z-[0] top-[-100px] left-1/2 transform -translate-x-1/2`}
+        onLoadingComplete={fadeIn}
       />
       <div className="w-full h-screen overflow-scroll hide-scrollbar fixed">
         <Container className="mb-10">

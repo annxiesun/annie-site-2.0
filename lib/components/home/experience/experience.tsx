@@ -48,7 +48,7 @@ export const Experience = () => {
         <h2 className="text-xl font-bold text-white mb-5">Experience</h2>
         <div className="flex flex-col gap-4">
         {EXPERIENCE.map((experience) => (
-          <ExperienceCard {...experience} />
+          <ExperienceCard key={experience.company} {...experience} />
         ))}</div>
       </Container>
     </>
