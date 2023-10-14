@@ -43,33 +43,22 @@ var interval;
 
 export const ProjectCarousel = () => {
   const [currSlide, setCurrSlide] = useState(0);
-  const [disabled, setDisabled] = useState(false);
 
   const timeout = useCallback(() => {
-    if (disabled) return;
 
     setCurrSlide((prev) => {
       console.log(prev)
       if (prev >= PROJECTS.length - 1) return 0;
       return prev + 1;
     });
-  }, [disabled]);
+  }, []);
 
   useEffect(() => {
     const rotate = setInterval(timeout, 3000);
     return () => {
       clearInterval(rotate);
     };
-  }, [currSlide, disabled]);
-
-  const onClick = (fn: () => void) => {
-    setDisabled(true);
-    interval = setTimeout(() => {
-      setDisabled(false);
-      clearTimeout(interval);
-    }, 200);
-    fn();
-  };
+  }, [currSlide]);
 
   const Projects = () =>
     PROJECTS.map((project) => {
@@ -101,7 +90,6 @@ export const ProjectCarousel = () => {
         {PROJECTS.map((project) => (
           <button
             key={project.id}
-            // onClick={() => onClick(() => setCurrSlide(project.id))}
             className={twMerge(
               "h-2 w-2 rounded-xl",
               project.id === currSlide ? "bg-white" : "bg-white/30"

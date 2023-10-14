@@ -39,7 +39,7 @@ export const Home = () => {
         priority
         className={`${
           imageLoaded ? "opacity-100" : "opacity-0"
-        } transition-opacity duration-500 absolute z-[0] top-[-100px] left-1/2 transform -translate-x-1/2
+        } transition-opacity duration-500 absolute z-[0] top-[-30px] left-1/2 transform -translate-x-1/2
         w-[1000px] h-[1000px] object-cover
     }
         `}
