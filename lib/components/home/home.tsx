@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import blinkAnim from "../../assets/blink.json";
 import { useState } from "react";
+import NavBar from "../layout/nav-bar";
 
 const FADE_INITIAL = { opacity: 0 };
 const FADE_ANIMATE = { opacity: 1 };
@@ -23,18 +24,19 @@ const DURATION3 = {
 const DURATION4 = { delay: 0.75, duration: 0.8 };
 
 export const Home = () => {
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false);
   const fadeIn = () => {
-    setImageLoaded(true)
+    setImageLoaded(true);
   };
 
   return (
     <>
+      <NavBar />
       <Image
         src={"/assets/bg/blob1.png"}
         alt=""
-        width={1000}
-        height={500}
+        width={500}
+        height={200}
         unoptimized={true}
         priority
         className={`${
@@ -65,18 +67,21 @@ export const Home = () => {
                 animate={FADE_ANIMATE}
                 transition={DURATION2}
               >
-                I'm a software engineer (with an eye for design), and I'm
-                studying Computer Science at the University of Waterloo & am
-                part of the{" "}
-                <a
-                  target="_blank"
-                  className="underline hover:text-[#033aff] transition-all"
-                  href="https://www.jeffjianzhao.com/"
-                >
-                  {"WatVis"}
-                </a>{" "}
-                team. I'm specializing in Human Computer Interaction and I love
-                creating compelling experiences for both developers & users.
+                <>
+                  I'm a software engineer (with an eye for design), and I'm
+                  studying Computer Science at the University of Waterloo & am
+                  part of the{" "}
+                  <a
+                    target="_blank"
+                    className="underline hover:text-[#033aff] transition-all"
+                    href="https://www.jeffjianzhao.com/"
+                  >
+                    {"WatVis"}
+                  </a>{" "}
+                  team. I'm specializing in Human Computer Interaction and I
+                  love creating compelling experiences for both developers &
+                  users.
+                </>
               </motion.span>
               <br />
               <br />

@@ -45,9 +45,7 @@ export const ProjectCarousel = () => {
   const [currSlide, setCurrSlide] = useState(0);
 
   const timeout = useCallback(() => {
-
     setCurrSlide((prev) => {
-      console.log(prev)
       if (prev >= PROJECTS.length - 1) return 0;
       return prev + 1;
     });
@@ -58,7 +56,7 @@ export const ProjectCarousel = () => {
     return () => {
       clearInterval(rotate);
     };
-  }, [currSlide]);
+  }, []);
 
   const Projects = () =>
     PROJECTS.map((project) => {

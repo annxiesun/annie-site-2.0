@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   @apply bg-shade;
   overflow: hidden;
-  cursor: pointer;
   user-select: none;
 }
 
@@ -32,3 +35,4 @@ body {
   cursor: url(https://cur.cursors-4u.net/food/foo-6/foo507.ani),
     url(https://cur.cursors-4u.net/food/foo-6/foo507.png), auto !important;
 } /* End https://www.cursors-4u.com */
+

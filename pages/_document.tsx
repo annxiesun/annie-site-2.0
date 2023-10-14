@@ -8,6 +8,9 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <link rel="preload" href="assets/fonts/BRHendrix-Black.ttf" as="font" type="font/ttf"/>
+      <link rel="preload" href="assets/fonts/BRHendrix-Regular.ttf" as="font" type="font/ttf"/>
+      <link rel="preload" href="assets/fonts/BRHendrix-SemiBold.ttf" as="font" type="font/ttf"/>
     </Html>
   )
 }
