@@ -23,11 +23,11 @@ const Footer = () => {
   return (
       <footer className="max-w-3xl w-full m-auto px-4 mb-12">
         <div className={classes.border}>
-          <div className="bg-shade w-full h-full p-6 rounded-md">
+          <div className="w-full h-full p-6 rounded-md">
             <div className="flex justify-between">
               <div>
                 <h4 className="text-white inline-block">Let's chat!</h4>
-                <h4 className="text-white text-xl inline-block">˗ˏˋ♡ˎˊ˗</h4>
+                <h4 className="text-white text-xl inline-block">˗ˏˋ✰ˎˊ˗</h4>
               </div>
               <div className="flex gap-2">
                 {LINKS.map((link) => (

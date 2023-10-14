@@ -4,7 +4,7 @@
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  @apply h-fit w-full max-w-[800px] p-3 rounded-md relative;
+  @apply h-fit w-full max-w-[800px] p-3 rounded-md relative backdrop-blur-2xl;
 }
 
 .projectCardPlaceholder {
@@ -13,7 +13,7 @@
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  @apply h-fit p-3 rounded-md gap-4 flex;
+  @apply h-fit p-3 rounded-md gap-4 flex backdrop-blur-2xl;
   gap: 4px;
 }
 
@@ -30,7 +30,7 @@
     rgba(0, 0, 0, 0) 100%
   );
 
-  @apply w-full flex justify-center gap-4 items-center max-w-4xl m-auto relative
+  @apply backdrop-blur-2xl w-full flex justify-center gap-4 items-center max-w-4xl m-auto relative
 }
 
 @media (max-width: 768px) {

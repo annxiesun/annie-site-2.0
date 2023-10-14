@@ -6,6 +6,7 @@ body {
     @apply bg-shade;
     overflow: hidden;
     cursor: pointer;
+    user-select: none;
 }
 
 @font-face {

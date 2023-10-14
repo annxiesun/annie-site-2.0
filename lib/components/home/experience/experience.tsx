@@ -5,6 +5,13 @@ import ExperienceCard, { ExperienceCardProps } from "./experience-card";
 
 const EXPERIENCE: ExperienceCardProps[] = [
   {
+    company: "Notion",
+    term: "Summer 2024 (incoming)",
+    description: "Software Engineer",
+    logo: "/assets/companies/notion.jpeg",
+    link: "https://www.notion.so/",
+  },
+  {
     company: "Spatial",
     term: "Summer 2023",
     description: "Software Engineer",
@@ -28,7 +35,7 @@ const EXPERIENCE: ExperienceCardProps[] = [
   {
     company: "Enzuzo",
     term: "Summer 2021",
-    description: "Web Developer",
+    description: "Web Developer & Designer",
     logo: "/assets/companies/enzuzo.png",
     link: "https://www.enzuzo.com/",
   },

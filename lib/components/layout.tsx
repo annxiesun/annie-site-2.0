@@ -1,5 +1,4 @@
-import Footer from "./layout/footer";
-import NavBar from "./layout/nav-bar";
+
 import Meta from "./meta";
 
 type Props = {

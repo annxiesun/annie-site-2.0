@@ -7,7 +7,6 @@ import Lottie from "lottie-react";
 import Post from "../../interfaces/post";
 import Link from "next/link";
 import WritingItem from "./writing-item";
-import NavBar from "../layout/nav-bar";
 import { motion } from "framer-motion";
 
 type WritingProps = {

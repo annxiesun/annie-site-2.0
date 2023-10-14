@@ -9,7 +9,7 @@ import { getPostBySlug, getAllPosts } from "../../lib/utils/api";
 import PostTitle from "../../lib/components/blog/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/utils/constants";
-import markdownToHtml from "../../lib/utils/markdownToHtml";
+import markdownToHtml from "../../lib/utils/markdown/markdownToHtml";
 import type PostType from "../../lib/interfaces/post";
 
 type Props = {

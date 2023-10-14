@@ -49,6 +49,7 @@ export const ProjectCarousel = () => {
     if (disabled) return;
 
     setCurrSlide((prev) => {
+      console.log(prev)
       if (prev >= PROJECTS.length - 1) return 0;
       return prev + 1;
     });
@@ -100,7 +101,7 @@ export const ProjectCarousel = () => {
         {PROJECTS.map((project) => (
           <button
             key={project.id}
-            onClick={() => onClick(() => setCurrSlide(project.id))}
+            // onClick={() => onClick(() => setCurrSlide(project.id))}
             className={twMerge(
               "h-2 w-2 rounded-xl",
               project.id === currSlide ? "bg-white" : "bg-white/30"
