@@ -3,26 +3,32 @@
 @tailwind utilities;
 
 body {
-    @apply bg-shade;
-    overflow: hidden;
-    cursor: pointer;
-    user-select: none;
+  @apply bg-shade;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
 }
 
 @font-face {
-    font-family: "BRHendrix";
-    src: url("../public/assets/fonts/BRHendrix-Regular.ttf");
-    font-weight: 400;
+  font-family: "BRHendrix";
+  src: url("../public/assets/fonts/BRHendrix-Regular.ttf");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "BRHendrix";
-    src: url("../public/assets/fonts/BRHendrix-Black.ttf");
-    font-weight: 600;
+  font-family: "BRHendrix";
+  src: url("../public/assets/fonts/BRHendrix-Black.ttf");
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: "BRHendrix";
-    src: url("../public/assets/fonts/BRHendrix-SemiBold.ttf");
-    font-weight: 700;
+  font-family: "BRHendrix";
+  src: url("../public/assets/fonts/BRHendrix-SemiBold.ttf");
+  font-weight: 700;
 }
+
+/* Start https://www.cursors-4u.com */
+* {
+  cursor: url(https://cur.cursors-4u.net/food/foo-6/foo507.ani),
+    url(https://cur.cursors-4u.net/food/foo-6/foo507.png), auto !important;
+} /* End https://www.cursors-4u.com */
