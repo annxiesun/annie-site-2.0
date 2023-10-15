@@ -5,7 +5,6 @@ import ProjectCarousel from "./project/project-card-carousel";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import blinkAnim from "../../assets/blink.json";
 import { useState } from "react";
 import NavBar from "../layout/nav-bar";
 
@@ -68,19 +67,20 @@ export const Home = () => {
                 transition={DURATION2}
               >
                 <>
-                  I'm a software engineer (with an eye for design), and I'm
-                  studying Computer Science at the University of Waterloo & am
-                  part of the{" "}
+                  {
+                    "I'm a software engineer (with an eye for design), and I'm studying Computer Science at the University of Waterloo & am part of the"
+                  }
                   <a
                     target="_blank"
                     className="underline hover:text-[#033aff] transition-all"
                     href="https://www.jeffjianzhao.com/"
+                    rel="noreferrer"
                   >
                     {"WatVis"}
-                  </a>{" "}
-                  team. I'm specializing in Human Computer Interaction and I
-                  love creating compelling experiences for both developers &
-                  users.
+                  </a>
+                  {
+                    "team. I'm specializing in Human Computer Interaction and I love creating compelling experiences for both developers & users."
+                  }
                 </>
               </motion.span>
               <br />

@@ -1,9 +1,5 @@
-import Container from "../container";
-import { EXAMPLE_PATH } from "../../utils/constants";
 
 import classes from "./footer.module.css";
-import blinkAnim from "../../assets/blink.json";
-import Lottie, { LottiePlayer } from "lottie-react";
 
 import Image from "next/image";
 
@@ -26,12 +22,12 @@ const Footer = () => {
           <div className="w-full h-full p-6 rounded-md">
             <div className="flex justify-between">
               <div>
-                <h4 className="text-white inline-block">Let's chat!</h4>
+                <h4 className="text-white inline-block">{"Let's chat!"}</h4>
                 <h4 className="text-white text-xl inline-block">˗ˏˋ✰ˎˊ˗</h4>
               </div>
               <div className="flex gap-2">
                 {LINKS.map((link) => (
-                  <a href={link.link} target="_blank">
+                  <a key={link.name} href={link.link} target="_blank" rel="noreferrer">
                     {
                       <Image
                         className="[&_svg]:fill-white"

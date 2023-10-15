@@ -18,7 +18,7 @@ type Props = {
   preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, preview }: Props) {
   const router = useRouter();
   const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
   if (!router.isFallback && !post?.slug) {

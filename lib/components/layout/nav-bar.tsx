@@ -21,7 +21,7 @@ export const NavBar = () => {
   return (
     <motion.div className={`w-full flex gap-3 justify-end px-12 py-4 ${classes.navbar}`}>
       {LINKS.map((link) => (
-          <Link href={link.link} className="text-white hover:bg-white/20 rounded-md transition-colors duration-100 px-2 py-1">{link.label}</Link>
+          <Link key={link.label} href={link.link} className="text-white hover:bg-white/20 rounded-md transition-colors duration-100 px-2 py-1">{link.label}</Link>
       ))}
     </motion.div>
   );

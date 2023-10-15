@@ -1,6 +1,4 @@
-import Image from "next/image";
 import classes from "./project-card.module.css";
-import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export const ProjectCardPlaceHolder = () => {

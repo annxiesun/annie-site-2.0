@@ -3,7 +3,6 @@ import rehypeStringify from "rehype-stringify";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
-import { readFileSync } from "fs";
 
 export default async function markdownToHtml(markdown: string) {
   const result = await unified()
