@@ -46,20 +46,19 @@ export const Home = () => {
         `}
         onLoadingComplete={fadeIn}
       />
-      <div className="w-full h-screen overflow-scroll hide-scrollbar fixed">
-        <Container className="mb-10">
-          <motion.div
-            initial={FADE_INITIAL}
-            animate={FADE_ANIMATE}
-            transition={DURATION1}
-            className="relative"
-          >
-            <h1 className="text-3xl font-bold text-white mb-8 mt-32">
-              Annie Sun ✰
-            </h1>
-          </motion.div>
-
-          <div className="flex flex-row gap-10">
+      <div className="w-full h-screen overflow-scroll hide-scrollbar fixed snap-mandatory snap-y flex flex-col gap-[100px]">
+        <Container className="my-16">
+          <div className="flex flex-col snap-center">
+            <motion.div
+              initial={FADE_INITIAL}
+              animate={FADE_ANIMATE}
+              transition={DURATION1}
+              className="relative"
+            >
+              <h1 className="text-3xl font-bold text-white mb-8 mt-32">
+                Annie Sun ✰
+              </h1>
+            </motion.div>
             <p className="text-white mb-4">
               <motion.span
                 initial={FADE_INITIAL}
@@ -68,7 +67,7 @@ export const Home = () => {
               >
                 <>
                   {
-                    "I'm a software engineer (with an eye for design), and I'm studying Computer Science at the University of Waterloo & am part of the"
+                    "I'm a software engineer (with an eye for design), and I'm studying Computer Science at the University of Waterloo & am part of the "
                   }
                   <a
                     target="_blank"
@@ -79,7 +78,7 @@ export const Home = () => {
                     {"WatVis"}
                   </a>
                   {
-                    "team. I'm specializing in Human Computer Interaction and I love creating compelling experiences for both developers & users."
+                    " team. I'm specializing in Human Computer Interaction and I love creating compelling experiences for both developers & users."
                   }
                 </>
               </motion.span>
@@ -97,7 +96,7 @@ export const Home = () => {
           </div>
         </Container>
         <motion.div
-          className="mb-16"
+          className="mb-16 snap-center"
           initial={FADE_INITIAL}
           animate={FADE_ANIMATE}
           transition={DURATION4}
@@ -105,28 +104,30 @@ export const Home = () => {
           <ProjectCarousel />
         </motion.div>
         <motion.div
-          className="mb-24"
+          className="mb-24 snap-center"
           initial={FADE_INITIAL}
           animate={FADE_ANIMATE}
           transition={DURATION4}
         >
           <Experience />
         </motion.div>
-        <Footer />
-        <div className="text-white w-full flex justify-center mb-56 gap-3">
-          <a
-            className="hover:underline"
-            href="https://d3l-n3st.vercel.app/prev"
-          >
-            {"<<"}
-          </a>
-          <span>✰</span>
-          <a
-            className="hover:underline"
-            href="https://d3l-n3st.vercel.app/next"
-          >
-            {">>"}
-          </a>
+        <div className="snap-center">
+          <Footer />
+          <div className="text-white w-full flex justify-center mb-56 gap-3">
+            <a
+              className="hover:underline"
+              href="https://d3l-n3st.vercel.app/prev"
+            >
+              {"<<"}
+            </a>
+            <span>✰</span>
+            <a
+              className="hover:underline"
+              href="https://d3l-n3st.vercel.app/next"
+            >
+              {">>"}
+            </a>
+          </div>
         </div>
       </div>
     </>

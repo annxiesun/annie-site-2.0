@@ -47,7 +47,7 @@ export const ProjectCarousel = () => {
   const timeout = useCallback(() => {
     setCurrSlide((prev) => {
       if (prev.locked) return prev;
-      if (prev.slide >= PROJECTS.length - 1)
+      if (prev.slide == PROJECTS.length - 1)
         return {
           locked: false,
           slide: 0,
@@ -62,7 +62,6 @@ export const ProjectCarousel = () => {
   useEffect(() => {
     const rotate = setInterval(timeout, 3000);
     return () => {
-      return
       clearInterval(rotate);
     };
   }, []);
