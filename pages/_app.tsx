@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import "../styles/index.css";
-import NavBar from "../lib/components/layout/nav-bar";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

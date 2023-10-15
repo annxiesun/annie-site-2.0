@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Container from "../../container";
 import ProjectCard, { ProjectCardProps } from "./project-card";
 
 import classes from "./project-card.module.css";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import ProjectCardPlaceHolder from "./project-card-placeholder";
-import { AnimatePresence, m, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 const PROJECTS: ProjectCardProps[] = [
@@ -37,23 +36,33 @@ const PROJECTS: ProjectCardProps[] = [
 const INITIAL = { opacity: 0, x: 50 };
 const ANIMATE = { opacity: 1, x: 0 };
 const EXIT = { opacity: 0, x: -50 };
-const TRANSITION = { duration: 0.3 };
-
-var interval;
+const TRANSITION = { duration: 0.5 };
 
 export const ProjectCarousel = () => {
-  const [currSlide, setCurrSlide] = useState(0);
+  const [currSlide, setCurrSlide] = useState({
+    locked: false,
+    slide: 0,
+  });
 
   const timeout = useCallback(() => {
     setCurrSlide((prev) => {
-      if (prev >= PROJECTS.length - 1) return 0;
-      return prev + 1;
+      if (prev.locked) return prev;
+      if (prev.slide >= PROJECTS.length - 1)
+        return {
+          locked: false,
+          slide: 0,
+        };
+      return {
+        locked: false,
+        slide: prev.slide + 1,
+      };
     });
   }, []);
 
   useEffect(() => {
     const rotate = setInterval(timeout, 3000);
     return () => {
+      return
       clearInterval(rotate);
     };
   }, []);
@@ -61,7 +70,7 @@ export const ProjectCarousel = () => {
   const Projects = () =>
     PROJECTS.map((project) => {
       return (
-        currSlide === project.id && (
+        currSlide.slide === project.id && (
           <motion.div
             key={project.id}
             initial={INITIAL}
@@ -90,7 +99,7 @@ export const ProjectCarousel = () => {
             key={project.id}
             className={twMerge(
               "h-2 w-2 rounded-xl",
-              project.id === currSlide ? "bg-white" : "bg-white/30"
+              project.id === currSlide.slide ? "bg-white" : "bg-white/30"
             )}
           />
         ))}
