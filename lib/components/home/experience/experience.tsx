@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "../../container";
 
 import ExperienceCard, { ExperienceCardProps } from "./experience-card";
