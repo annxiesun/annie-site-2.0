@@ -77,7 +77,7 @@ export const ProjectCarousel = () => {
   }, []);
 
   useEffect(() => {
-    const rotate = setInterval(timeout, 2000);
+    const rotate = setInterval(timeout, 5000);
     rotate_id = rotate;
 
     return () => {
@@ -106,7 +106,7 @@ export const ProjectCarousel = () => {
       </Container>
       <div className="relative w-full max-w-[800px] mx-auto">
         <div className="w-full h-[300px]"/>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
           <motion.div
             key={currSlide.slide}
             variants={variants}
@@ -114,7 +114,7 @@ export const ProjectCarousel = () => {
             animate="center"
             exit="exit"
             transition={{
-              opacity: { duration: 0.2 },
+               duration: 0.5
             }}
             className={classes.carouselContainer}
           >
