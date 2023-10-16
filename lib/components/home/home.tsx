@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { useState } from "react";
-import NavBar from "../layout/nav-bar";
 
 const FADE_INITIAL = { opacity: 0 };
 const FADE_ANIMATE = { opacity: 1 };
@@ -30,7 +29,6 @@ export const Home = () => {
 
   return (
     <>
-      <NavBar />
       <Image
         src={"/assets/bg/blob1.png"}
         alt=""
@@ -67,11 +65,20 @@ export const Home = () => {
               >
                 <>
                   {
-                    "I'm a software engineer (with an eye for design), and I'm studying Computer Science at the University of Waterloo & am part of the "
+                    "I'm a software engineer (with an eye for design), and I'm studying " 
                   }
                   <a
                     target="_blank"
-                    className="underline hover:text-[#033aff] transition-all"
+                    className="underline hover:text-[#0077ff] transition-all"
+                    href="https://uwaterloo.ca/"
+                    rel="noreferrer"
+                  >
+                    {"Computer Science at the University of Waterloo"}
+                  </a>
+                     {" & am part of the "}
+                  <a
+                    target="_blank"
+                    className="underline hover:text-[#0077ff] transition-all"
                     href="https://www.jeffjianzhao.com/"
                     rel="noreferrer"
                   >

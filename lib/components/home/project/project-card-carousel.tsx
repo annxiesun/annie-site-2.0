@@ -33,17 +33,34 @@ const PROJECTS: ProjectCardProps[] = [
   },
 ];
 
-const INITIAL = { opacity: 0, x: 50 };
-const ANIMATE = { opacity: 1, x: 0 };
-const EXIT = { opacity: 0, x: -50 };
-const TRANSITION = { duration: 0.5 };
+const variants = {
+  enter: () => {
+    return {
+      x: 50,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: () => {
+    return {
+      zIndex: 0,
+      x: -50,
+      opacity: 0,
+    };
+  },
+};
 
+let rotate_id = null;
 export const ProjectCarousel = () => {
   const [currSlide, setCurrSlide] = useState({
     locked: false,
     slide: 0,
   });
-
+  const [rotating, setRotating] = useState(true);
   const timeout = useCallback(() => {
     setCurrSlide((prev) => {
       if (prev.locked) return prev;
@@ -60,38 +77,53 @@ export const ProjectCarousel = () => {
   }, []);
 
   useEffect(() => {
-    const rotate = setInterval(timeout, 3000);
+    const rotate = setInterval(timeout, 2000);
+    rotate_id = rotate;
+
     return () => {
       clearInterval(rotate);
     };
   }, []);
 
-  const Projects = () =>
-    PROJECTS.map((project) => {
-      return (
-        currSlide.slide === project.id && (
-          <motion.div
-            key={project.id}
-            initial={INITIAL}
-            animate={ANIMATE}
-            exit={EXIT}
-            transition={TRANSITION}
-            className={classes.carouselContainer}
-          >
-            <ProjectCardPlaceHolder />
-            <ProjectCard {...project} />
-            <ProjectCardPlaceHolder />
-          </motion.div>
-        )
-      );
-    });
+  useEffect(() => {
+    if (!rotating) clearInterval(rotate_id);
+  }, [rotating]);
+
+  const onClickSelector = useCallback((i: number) => {
+    if (rotating) setRotating(false);
+    if (!currSlide.locked) {
+      setCurrSlide({
+        slide: i,
+        locked: false,
+      });
+    }
+  }, []);
 
   return (
     <>
       <Container>
         <h2 className="text-xl font-bold text-white mb-2">Projects</h2>
       </Container>
-      <AnimatePresence mode="wait">{Projects()}</AnimatePresence>
+      <div className="relative w-full max-w-[800px] mx-auto">
+        <div className="w-full h-[300px]"/>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currSlide.slide}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              opacity: { duration: 0.2 },
+            }}
+            className={classes.carouselContainer}
+          >
+            <ProjectCardPlaceHolder />
+            <ProjectCard {...PROJECTS[currSlide.slide]} />
+            <ProjectCardPlaceHolder />
+          </motion.div>
+        </AnimatePresence>
+      </div>
       <div className="flex gap-3 w-full items-center justify-center mt-5">
         {PROJECTS.map((project) => (
           <button
@@ -100,6 +132,7 @@ export const ProjectCarousel = () => {
               "h-2 w-2 rounded-xl",
               project.id === currSlide.slide ? "bg-white" : "bg-white/30"
             )}
+            onClick={useCallback(() => onClickSelector(project.id), [])}
           />
         ))}
       </div>

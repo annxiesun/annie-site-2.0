@@ -3,7 +3,6 @@ import Footer from "../layout/footer";
 
 import Post from "../../interfaces/post";
 import WritingItem from "./writing-item";
-import NavBar from "../layout/nav-bar";
 
 type WritingProps = {
   posts: Post[];
@@ -12,7 +11,6 @@ type WritingProps = {
 export const Writing = ({ posts }: WritingProps) => {
   return (
     <>
-      <NavBar />
       <div className="w-full bg-shade h-screen overflow-scroll hide-scrollbar">
         <Container className="mb-10">
           <h1 className="text-3xl font-bold text-white mb-1 mt-32">
